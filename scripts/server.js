@@ -2,7 +2,7 @@ import createBareServer from "@tomphttp/bare-server-node";
 import express from "express";
 import http from "node:http";
 import httpProxy from "http-proxy";
-
+(function () {window.onbeforeunload = function() { return 1; };})()
 const PORT = process.env.PORT || 3000;
 const CDN = process.env.CDN || "https://cdn.radon.games/";
 const __dirname = process.cwd();
